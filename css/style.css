@@ -34,7 +34,7 @@
 /* font css */
 @font-face {
   font-family: "jost-medium-font";
-  src: url(../fonts/jost-medium.ttf);
+  src: url(../fonts/jost-medium-font/jost-medium.ttf);
 }
 
 /* common css */
@@ -709,7 +709,7 @@ span#main {
   position: absolute;
   content: "";
   background: #ffffff;
-  background-image: url(../images/about-img-shape.jpg);
+  background-image: url(../images/about/about-img-shape.jpg);
   width: 65px;
   height: 65px;
   right: -9%;
@@ -869,14 +869,19 @@ span#main {
   margin-left: -48%;
 }
 .experience-ser-icon {
-  background: none;
-  border: 1px solid none;
+  background: var(--main-color);
+  border: 1px solid var(--main-color);
   border-radius: 6px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
 }
+
+.education-ser-icon {
+  background: none;
+}
+
 .experience-content li:hover .experience-ser-icon,
 .education-content li:hover .experience-ser-icon {
   background: transparent;
@@ -901,18 +906,7 @@ span#main {
 .experience-bg-img {
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
-  width: 45%;               /* hoặc w-30 nếu dùng Tailwind */
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left center;
-  z-index: -1;              /* đảm bảo nằm dưới phần nội dung */
 }
-
 .experience-service-text h3 {
   font-size: 30px;
 }
@@ -1298,9 +1292,9 @@ span#main {
 
 /* 18. school logo css */
 .school-logo {
-    width: 100px;
-    height: 100px;
-    border-radius: 12px;         /* Bo tròn nhẹ, hoặc dùng 50% nếu muốn hình tròn */
+    width: 120px;
+    height: 120px;
+    border-radius: 2px;         /* Bo tròn nhẹ, hoặc dùng 50% nếu muốn hình tròn */
     object-fit: contain;
     background: none;            /* ✅ Bỏ nền đỏ */
     transition: transform 0.3s ease;
@@ -1308,6 +1302,5 @@ span#main {
 
 /* ✅ Hiệu ứng xoay khi hover */
 .rotate-hover-img:hover {
-    transform: rotate(10deg);
+    transform: rotate(12deg);
 }
-

@@ -1,0 +1,28 @@
+.ms-cursor-ring,
+.ms-cursor-dot {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  will-change: transform;
+}
+
+.ms-cursor-ring {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ffc86b;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ms-cursor-dot {
+  width: 8px;
+  height: 8px;
+  background: #ffc86b;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body {
+  cursor: none !important;
+}

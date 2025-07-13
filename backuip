@@ -282,3 +282,212 @@
         <!-- experience-area-end -->
 
 
+
+
+        <!-- ====== contact-area-start
+        ==================================================== -->
+        <div id="contact" class="contact-area over-hidden mb-160 mt-155">
+            <div id="hero-btn" class="contact-wrapper position-relative">
+                <div class="container">
+                    <div class="row align-items-start">
+                        <div class="col-xl-12 col-lg-12  col-md-12  col-sm-12 col-12">
+                            <div class="title text-center">
+                                <span class="theme-color text-uppercase d-block mb-6">Contact Me</span>
+                                <h2>Let’s Start A New Project</h2>
+                            </div><!-- /title -->
+                        </div><!-- /col -->
+                    </div><!-- /row -->
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-5 col-md-12  col-sm-12 col-12">
+                            <div class="contact-wrapper mt-70">
+                                <ul class="contact-info-content">
+                                    <li
+                                        class="contact-location s-contact mb-20 transition-3 d-lg-flex align-items-center">
+                                        <div class="contact-icon d-inline-block text-center theme-bg mr-30">
+                                            <span class="text-white d-inline-block">
+                                                <i class="fas fa-map-marker-alt"></i>
+                                            </span>
+                                        </div><!-- /contact-icon -->
+                                        <div class="contact-text d-inline-block">
+                                            <h4 class="mb-2">Location</h4>
+                                            <p class="text-color mb-0">Can Tho city, Vietnam</p>
+                                        </div>
+                                    </li><!-- /contact-location -->
+                                    <li
+                                        class="contact-email s-contact mb-20 transition-3 d-lg-flex  align-items-center">
+                                        <div class="contact-icon d-inline-block text-center theme-bg mr-30">
+                                            <span class="text-white d-inline-block">
+                                                <i class="fas fa-phone-alt"></i>
+                                            </span>
+                                        </div><!-- /contact-icon -->
+                                        <div class="contact-text">
+                                            <h4 class="mb-2">Phone</h4>
+                                            <p class="mb-0">
+                                                <a class="text-color primary-hover d-block" href="#">+123 456
+                                                    7890</a>
+                                            </p>
+                                        </div>
+                                    </li><!-- /contact-email -->
+                                    <li
+                                        class="contact-phone s-contact mb-20 transition-3 d-lg-flex  align-items-center">
+                                        <div class="contact-icon d-inline-block text-center theme-bg mr-30">
+                                            <span class="text-white d-inline-block">
+                                                <i class="fas fa-envelope"></i>
+                                            </span>
+                                        </div><!-- /contact-icon -->
+                                        <div class="contact-text d-inline-block">
+                                            <h4 class="mb-2">Email</h4>
+                                            <p class="mb-0">
+                                                <a class="text-color primary-hover d-block"
+                                                    href="#">pl.huudan@gmail.com</a>
+                                            </p>
+                                        </div>
+                                    </li><!-- /contact-phone -->
+                                </ul><!-- /contact-info-content -->
+                            </div><!-- /contact-wrapper -->
+                        </div><!-- /col -->
+                        <div class="col-xl-6 col-lg-7 col-md-12  col-sm-12 col-12">
+                            <div class="contact-wrapper">
+                                <div class="contact-form mt-45">
+                                    <form action="https://ethemestudio.com/demo/thames/1_home_main/php/mail.php"
+                                        method="POST" id="contact-form">
+                                        <div class="contact-info pt-20">
+                                            <div class="row">
+                                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 pr6 mb-12"
+                                                    data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+                                                    data-aos-duration="2000">
+                                                    <input
+                                                        class="name w-100 theme-border pl-20 pt-15 pb-15 pr-10 form-color border-radius5 openS-font-family"
+                                                        type="text" name="inputName" id="inputName"
+                                                        placeholder="Your Name">
+                                                    <!-- /name -->
+                                                </div><!-- /col -->
+                                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 pl6 pr-12 mb-12"
+                                                    data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+                                                    data-aos-duration="2500">
+                                                    <input
+                                                        class="email w-100 theme-border pl-20 pt-15 pb-15 pr-10 form-color border-radius5 openS-font-family"
+                                                        type="email" name="inputEmail" id="inputEmail"
+                                                        placeholder="Your Email">
+                                                    <!-- /email -->
+                                                </div><!-- /col -->
+                                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 pr6 mb-12"
+                                                    data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+                                                    data-aos-duration="2000">
+                                                    <input
+                                                        class="phone w-100 theme-border pl-20 pt-15 pb-15 pr-10 form-color border-radius5 openS-font-family"
+                                                        type="text" name="inputPhone" id="inputPhone"
+                                                        placeholder="Your Phone">
+                                                    <!-- /phone -->
+                                                </div><!-- /col -->
+                                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 pl6 pr-12 mb-12"
+                                                    data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+                                                    data-aos-duration="2500">
+                                                    <input
+                                                        class="subject w-100 theme-border pl-20 pt-15 pb-15 pr-10 form-color border-radius5 openS-font-family"
+                                                        type="text" name="inputSubject" id="inputSubject"
+                                                        placeholder="Your Subject">
+                                                    <!-- /subject -->
+                                                </div><!-- /col -->
+                                            </div><!-- /row -->
+                                            <div class="row ">
+                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 pl-12 pr-12 mb-12"
+                                                    data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+                                                    data-aos-duration="2000">
+                                                    <textarea
+                                                        class="massage w-100 theme-border pl-20 pt-15 pr-10 primary-color border-radius5 openS-font-family"
+                                                        name="inputMessage" id="inputMessage"
+                                                        placeholder="Start writing message here"></textarea>
+                                                </div><!-- /col -->
+                                            </div><!-- /row -->
+                                            <button
+                                                class="btn position-relative over-hidden text-white d-inline-block theme-bg white-text text-uppercase"
+                                                type="submit" name="submit" data-aos="fade-up"
+                                                data-aos-anchor-placement="top-bottom" data-aos-duration="2500">Submit
+                                                Now</button>
+                                        </div>
+                                    </form>
+                                    <p class="form-message mt-20"></p>
+                                </div><!-- /contact-form -->
+                            </div><!-- /contact-wrapper -->
+                        </div><!-- /col -->
+                    </div><!-- /row -->
+
+                </div><!-- /container -->
+            </div><!-- /contact-wrapper -->
+        </div>
+        <!-- contact-area-end  -->
+
+
+                <!-- ====== fun-fact-area-start
+        ==================================================== -->
+        <div class="fun-fact-area fun-fact-bg position-relative over-hidden pt-150 pb-120" data-aos="fade-up"
+            data-aos-duration="1800">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-5  col-lg-6  col-md-12 col-sm- col-">
+                        <div class="fun-fact-content mb-50 mr-lg-2 mr-xl-0">
+                            <div class="position-relative">
+                                <div class="title">
+                                    <span class="theme-color text-uppercase d-block mb-1 mt--5">Fun Facts</span>
+                                    <h2 class="mb-30 text-white">I Develop cái gì đó</h2>
+                                </div><!-- /title -->
+                            </div>
+                            <p>facts gì đó</p>
+                        </div><!-- fun-fact-content -->
+                    </div><!-- /col -->
+
+                    <div class="col-xl-6 offset-xl-1 col-lg-6  col-md-12  col-sm- col-">
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-xl-6 col-lg-6  col-md-6  col-sm-6 col-10">
+                                <div class="single-fact d-block d-flex align-items-center  border-radius10 mb-30">
+                                    <div class="mr-25 d-flex align-content-start justify-content-center">
+                                        <span class="theme-color d-inline-block counter">2</span>
+                                    </div>
+                                    <h3 class="text-white mb-0">Years of <br> Experience</h3>
+                                </div><!-- /single-fact -->
+                            </div><!-- /col -->
+
+                            <div class="col-xl-6 col-lg-6  col-md-6  col-sm-6 col-10">
+                                <div class="single-fact d-block d-flex align-items-center border-radius10 mb-30">
+                                    <div class="mr-25 d-flex align-content-start justify-content-center">
+                                        <span class="theme-color d-inline-block counter">2</span>
+                                        <span class="per d-inline-block theme-color">K</span>
+                                    </div>
+                                    <h3 class="text-white mb-0">Total <br> Company</h3>
+                                </div><!-- /single-fact -->
+                            </div><!-- /col -->
+
+                            <div class="col-xl-6 col-lg-6  col-md-6  col-sm-6 col-10">
+                                <div class="single-fact d-block d-flex align-items-center border-radius10 mb-30">
+                                    <div class="mr-25 d-flex align-content-start justify-content-center">
+                                        <span class="theme-color d-inline-block counter">4</span>
+                                        <span class="per d-inline-block theme-color">K</span>
+                                    </div>
+                                    <h3 class="text-white mb-0">Projects <br> Completed</h3>
+                                </div><!-- /single-fact -->
+                            </div><!-- /col -->
+
+                            <div class="col-xl-6 col-lg-6  col-md-6  col-sm-6 col-10">
+                                <div class="single-fact d-block d-flex align-items-center border-radius10 mb-30">
+                                    <div class="mr-25 d-flex align-content-start justify-content-center">
+                                        <span class="theme-color d-inline-block counter">30</span>
+                                    </div>
+                                    <h3 class="text-white mb-0">Digital <br> Products</h3>
+                                </div><!-- /single-fact -->
+                            </div><!-- /col -->
+
+                        </div><!-- /row -->
+                    </div><!-- /col -->
+
+                </div><!-- /row -->
+            </div><!-- /container -->
+
+            <div class="fact-style1 position-absolute d-none d-md-inline-block">
+                <img src="images/shape/fact-icon1.png" alt="shape 1">
+            </div><!-- /fact-style1 -->
+            <div class="fact-style2 position-absolute d-none d-md-inline-block">
+                <img src="images/shape/fact-icon2.png" alt="shape 2">
+            </div><!-- /fact-style2 -->
+        </div>
+        <!-- fun-fact-area-end  -->

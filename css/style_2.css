@@ -13329,7 +13329,6 @@ header.header-full-width.header--sticky.sticky {
   text-align: center;
   font-family: var(--font-primary);
   font-weight: 700;
-  
   /* Phần quan trọng nhất để tạo hiệu ứng mờ */
   -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
   mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);

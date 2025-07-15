@@ -112,68 +112,86 @@ function throttle(fn, wait) {
         }
     }
 }
-
 document.addEventListener('DOMContentLoaded', function () {
     const targetElement = document.querySelector('.text-para-documents');
 
     if (targetElement) {
-        const childNodes = Array.from(targetElement.childNodes);
-        targetElement.innerHTML = '';
+        const originalHtmlContent = targetElement.innerHTML; // Lấy toàn bộ HTML gốc của h2
+        targetElement.innerHTML = ''; // Xóa nội dung hiện tại để xây dựng lại
 
-        function wrapCharacters(node, isRed = false) {
-            let textContent = node.textContent;
-            if (node.nodeType === Node.TEXT_NODE) {
-                // Chỉ chuẩn hóa khoảng trắng thừa trong text nodes
-                textContent = textContent.trim().replace(/\s+/g, ' ');
-            }
+        // Tạo một div tạm thời để phân tích HTML gốc thành cấu trúc DOM
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = originalHtmlContent;
 
-            for (const char of textContent) {
+        // Hàm xử lý một đoạn văn bản (một từ hoặc cụm từ)
+        // Bọc các ký tự trong .char-span và thiết lập màu/hiệu ứng hover
+        function processTextSegment(text, isRedColor) {
+            const wordWrapper = document.createElement('span');
+            // Rất quan trọng: Ngăn ngắt dòng bên trong từ/phân đoạn này
+            wordWrapper.style.whiteSpace = 'nowrap';
+            // Đặt màu cơ bản cho wordWrapper để các charSpan con kế thừa (nếu không thiết lập riêng)
+            wordWrapper.style.color = isRedColor ? 'var(--color-primary)' : 'var(--color-heading)';
+
+            // Chuẩn hóa nhiều khoảng trắng thành một khoảng trắng không ngắt dòng
+            // Điều này áp dụng ở cấp độ từ/phân đoạn
+            const cleanedText = text.replace(/\s+/g, '\u00A0'); // Convert all multiple spaces to single non-breaking space
+
+            for (const char of cleanedText) {
                 const charSpan = document.createElement('span');
-                charSpan.className = 'char-span';
+                charSpan.className = 'char-span'; // Để áp dụng hiệu ứng hover
+                charSpan.textContent = char; // Ký tự (nếu là khoảng trắng thì đã là &nbsp;)
+                
+                // Thiết lập màu sắc trực tiếp cho từng ký tự để đảm bảo
+                charSpan.style.color = isRedColor ? 'var(--color-primary)' : 'var(--color-heading)';
 
-                if (isRed) {
-                    charSpan.style.color = 'var(--color-primary)';
-                } else {
-                    charSpan.style.color = 'var(--color-heading)';
-                }
-
-                charSpan.textContent = (char === ' ') ? '\u00A0' : char;
-                targetElement.appendChild(charSpan);
-
+                // Thêm sự kiện hover
                 charSpan.addEventListener('mouseenter', () => {
                     charSpan.style.transform = 'scale(1.2)';
                 });
                 charSpan.addEventListener('mouseleave', () => {
                     charSpan.style.transform = 'scale(1)';
                 });
+                wordWrapper.appendChild(charSpan);
             }
+            return wordWrapper;
         }
 
-        childNodes.forEach(node => {
+        // Duyệt qua các node con của div tạm thời (đã parse HTML gốc)
+        Array.from(tempDiv.childNodes).forEach(node => {
             if (node.nodeType === Node.TEXT_NODE) {
-                wrapCharacters(node);
+                // Xử lý các node văn bản thuần túy (ví dụ: "Not for ", "I am, ")
+                // Tách theo khoảng trắng để có các "từ" hoặc dấu câu riêng lẻ
+                // regex `(\s+)` giúp giữ lại khoảng trắng làm phần tử riêng
+                const textParts = node.nodeValue.split(/(\s+)/); 
+
+                textParts.forEach(part => {
+                    if (part.length > 0) { // Bỏ qua các chuỗi rỗng có thể sinh ra từ split
+                        const isWhitespace = /^\s+$/.test(part); // Kiểm tra nếu chỉ là khoảng trắng
+
+                        if (isWhitespace) {
+                            // Tạo một span riêng cho khoảng trắng để nó được bọc và xử lý đúng
+                            const whitespaceSpan = document.createElement('span');
+                            whitespaceSpan.style.whiteSpace = 'nowrap'; // Ngăn khoảng trắng bị ngắt dòng
+                            whitespaceSpan.style.color = 'var(--color-heading)'; // Màu mặc định cho khoảng trắng
+                            whitespaceSpan.textContent = '\u00A0'; // Dấu cách không ngắt dòng
+                            targetElement.appendChild(whitespaceSpan);
+                        } else {
+                            // Đây là một từ (hoặc dấu câu liền kề) không phải khoảng trắng
+                            targetElement.appendChild(processTextSegment(part, false)); // Màu đen mặc định
+                        }
+                    }
+                });
+
             } else if (node.nodeType === Node.ELEMENT_NODE && node.tagName.toLowerCase() === 'span') {
-                // Không chuẩn hóa khoảng trắng trong thẻ span
-                const spanContent = document.createElement('span');
-                spanContent.style.color = 'var(--color-primary)';
-                const originalText = node.textContent;
-                for (const char of originalText) {
-                    const charSpan = document.createElement('span');
-                    charSpan.className = 'char-span';
-                    charSpan.style.color = 'var(--color-primary)';
-                    charSpan.textContent = (char === ' ') ? '\u00A0' : char;
-                    spanContent.appendChild(charSpan);
-                    charSpan.addEventListener('mouseenter', () => {
-                        charSpan.style.transform = 'scale(1.2)';
-                    });
-                    charSpan.addEventListener('mouseleave', () => {
-                        charSpan.style.transform = 'scale(1)';
-                    });
-                }
-                targetElement.appendChild(spanContent);
-            } else {
-                targetElement.appendChild(node);
+                // Xử lý các thẻ <span> gốc của bạn (ví dụ: "<span> jobs</span>")
+                // Đây là các từ/cụm từ mà bạn muốn màu đỏ
+                const spanContent = node.textContent; // Ví dụ: " jobs"
+                targetElement.appendChild(processTextSegment(spanContent, true)); // Màu đỏ
+            } else if (node.nodeType === Node.ELEMENT_NODE && node.tagName.toLowerCase() === 'br') {
+                // Xử lý thẻ <br>
+                targetElement.appendChild(node.cloneNode()); // Thêm bản sao của thẻ <br>
             }
+            // Bỏ qua các loại node khác nếu có
         });
     }
 });

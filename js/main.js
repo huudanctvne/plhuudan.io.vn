@@ -340,8 +340,21 @@
         }, 1500);
     });
 
-
-
-  
+     // Áp dụng cho tất cả modal có id bắt đầu bằng "exampleModal-b"
+  document.addEventListener("DOMContentLoaded", function () {
+    const modals = document.querySelectorAll('[id^="exampleModal-b"]');
+    modals.forEach(modal => {
+      modal.addEventListener('show.bs.modal', function () {
+        document.querySelectorAll('.fun-fact-area').forEach(el => {
+          el.classList.remove('over-hidden');
+        });
+      });
+      modal.addEventListener('hidden.bs.modal', function () {
+        document.querySelectorAll('.fun-fact-area').forEach(el => {
+          el.classList.add('over-hidden');
+        });
+      });
+    });
+  });
 
 })(jQuery);	  

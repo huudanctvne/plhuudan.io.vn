@@ -112,6 +112,7 @@ function throttle(fn, wait) {
         }
     }
 }
+
 document.addEventListener('DOMContentLoaded', function () {
     const targetElement = document.querySelector('.text-para-documents');
 

@@ -147,3 +147,34 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const ring = document.getElementById("magic-cursor");
+
+  if (!ring) {
+    console.warn("Không tìm thấy #magic-cursor trong DOM");
+    return;
+  }
+
+  document.addEventListener("click", () => {
+    ring.classList.add("clicking");
+    setTimeout(() => {
+      ring.classList.remove("clicking");
+    }, 400); // thời gian trùng với animation CSS
+  });
+});
+
+document.addEventListener("click", (e) => {
+  const ripple = document.createElement("span");
+  ripple.classList.add("magic-click-effect");
+  ripple.style.left = `${e.clientX}px`;
+  ripple.style.top = `${e.clientY}px`;
+
+  document.body.appendChild(ripple);
+
+  setTimeout(() => {
+    ripple.remove();
+  }, 600); // đúng thời gian animation
+});
+
+

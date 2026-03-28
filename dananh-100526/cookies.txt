@@ -1,0 +1,20 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.paperlesspost.com	TRUE	/	FALSE	1999999999	FastlyConstructor	true
+www.paperlesspost.com	TRUE	/	FALSE	1999999999	ConstructorioID_client_id	af9d3ac1-663f-4184-8235-cadd6e585780
+www.paperlesspost.com	TRUE	/	FALSE	1999999999	ConstructorioID_session_id	1
+www.paperlesspost.com	TRUE	/	FALSE	1999999999	ConstructorioID_session	{"sessionId":1,"lastTime":1774717117000}
+www.paperlesspost.com	TRUE	/	FALSE	1999999999	visitor_id	41e1378c-3b8f-465a-9d2e-017b59f4ee49
+www.paperlesspost.com	TRUE	/	FALSE	1999999999	SameSite	Lax
+www.paperlesspost.com	TRUE	/	FALSE	1999999999	edge_experiments	{"session_id":"41e1378c-3b8f-465a-9d2e-017b59f4ee49","updated_at":1774717118,"2026-Q1-unified-paygo-abc":{"feature_id":1772136792,"created_at":1774717118,"variant_name":"tieredv2","variant_id":3,"is_control":0,"user_type":"session"}}
+www.paperlesspost.com	TRUE	/	FALSE	1999999999	SameSite	Lax
+www.paperlesspost.com	TRUE	/	FALSE	1999999999	country_code	VN
+.paperlesspost.com	TRUE	/	FALSE	1999999999	SameSite	Lax
+.google.com	TRUE	/	FALSE	1999999999	__Secure-BUCKET	CLwF
+.google.com	TRUE	/	FALSE	1999999999	NID	530=rZgIDb-HAl9oj8pVm_ODfPwAUL9QwrMuqFbsBOW8Hi2Pr5Bck21RFfoezKYpH1VvPrZHTpS8u-lkBpPxn1_i55hTHLqnm14LXrXDSgEKRUpkCerEcmuHyCbRCn5vn8-GvpKhOD1N7GUgYf2KtvR78ZGJp4Y4qVHM5o423RCjL0Ui_NqZEkN4L5j553_fttoW7wGP3NSwqAndG7_q7WZ-63zp-QKNZcFwFAA
+.paperlesspost.zendesk.com	TRUE	/	FALSE	1999999999	__cf_bm	ZyMu5qvMtldMDSQ_.3LRGIvNtKWyDaVKHs9YeTel6j8-1774717134-1.0.1.1-1nB.uaKu8x7pm7HrPaC0D4sge2z9ioqpSY9bLAIgj03dGNRBbDEX49o_CmDPcBGGF_Y5lJwpf1Hefe7gDVbiPDUzc5bFWV2ANiMxDyhOCgo
+.paperlesspost.zendesk.com	TRUE	/	FALSE	1999999999	_cfuvid	4_.DJmfndnoyiqipDklcF8HXKx0hS77Cvj4bacd0zDw-1774717134181-0.0.1.1-604800000
+paperlesspost.zendesk.com	TRUE	/	FALSE	1999999999	SameSite	None
+.google.com	TRUE	/	FALSE	1999999999	__Secure-STRP	AEEP7gK_FRZGPJvRp0hQwUE6vXWmsUqwpLdCXeu3K2K-xu-kbCed_7UZuBE8gDPkhFp4ehsGV7QniYglB-PCe7uxepkfXOQ6u6LA
+www.google.com	TRUE	/	FALSE	1999999999	SameSite	strict
+

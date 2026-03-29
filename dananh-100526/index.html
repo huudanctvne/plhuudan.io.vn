@@ -65,14 +65,8 @@
       };
     </script>
     <link rel="canonical" href="index.html" />
-    <meta
-      property="og:url"
-      content="https://plhuudan.io.vn/dananh-100526/"
-    />
-    <meta
-      property="og:title"
-      content="Thiệp cưới Đan &#38; Anh | 10.05.26"
-    />
+    <meta property="og:url" content="https://plhuudan.io.vn/dananh-100526/" />
+    <meta property="og:title" content="Thiệp cưới Đan &#38; Anh | 10.05.26" />
     <meta property="og:type" content="website" />
     <meta
       property="og:image"
@@ -6033,6 +6027,195 @@
         background-image: none !important;
       }
     </style>
+
+    <style>
+      .love-timeline {
+        width: 100%;
+        max-width: 300px; /* giới hạn desktop */
+        margin: auto;
+        padding-bottom: 20px;
+      }
+
+      .timeline-container {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 3 / 4; /* giữ tỷ lệ đẹp */
+      }
+
+      /* CARD base */
+      .timeline-card {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 70%;
+        text-align: center;
+        font-family: inherit;
+
+        transform: translateX(-50%) scale(0.7);
+        opacity: 0.3;
+        transition: all 0.5s ease;
+      }
+
+      /* Ẩn text mặc định */
+      .timeline-card h3,
+      .timeline-card p {
+        opacity: 0;
+        transform: translateY(10px);
+        transition: all 0.4s ease;
+      }
+
+      /* CENTER */
+      .timeline-card.active {
+        position: relative;
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
+        z-index: 3;
+      }
+
+      /* Khi active thì hiện text */
+      .timeline-card.active h3,
+      .timeline-card.active p {
+        opacity: 1;
+        transform: translateY(0);
+        font-weight: bold;
+      }
+
+      .timeline-card.active .prev {
+        left: -20px; /* 👈 ra ngoài ảnh */
+      }
+
+      .timeline-card.active .next {
+        right: -80px;
+      }
+
+      /* LEFT */
+      .timeline-card.prev {
+        transform: translateX(-120%) scale(0.8);
+        opacity: 0.5;
+        z-index: 2;
+      }
+
+      /* RIGHT */
+      .timeline-card.next {
+        transform: translateX(20%) scale(0.8);
+        opacity: 0.5;
+        z-index: 2;
+      }
+
+      /* IMAGE */
+      .timeline-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+      }
+
+      /* Text style (cho đẹp hơn) */
+      .timeline-card.active h3 {
+        margin-top: 10px;
+        font-size: 18px;
+      }
+
+      .timeline-card.active p {
+        font-size: 14px;
+        color: #666;
+      }
+
+      /* Animation mượt */
+      .timeline-card.active h3,
+      .timeline-card.active p {
+        animation: fadeUp 0.5s ease;
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(15px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* BUTTON */
+      .nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        width: 40px;
+        height: 40px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.9);
+        border: none;
+
+        font-size: 20px;
+        line-height: 1;
+
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        z-index: 20;
+      }
+
+      @media (max-width: 480px) {
+        .nav {
+          width: 34px;
+          height: 34px;
+          font-size: 18px;
+        }
+      }
+
+      .prev {
+        left: 8px;
+      }
+
+      .next {
+        right: 8px;
+      }
+
+      /* DOT CONTAINER (overlay lên ảnh) */
+      .dots {
+        position: absolute; /* 🔥 quan trọng */
+        bottom: 10px; /* bám sát dưới card */
+        left: 50%;
+        transform: translateX(-50%);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+
+        width: auto; /* không cần 100% nữa */
+        z-index: 10;
+      }
+
+      /* DOT */
+      .dots span {
+        width: 8px;
+        height: 8px;
+        background: rgba(200, 200, 200, 0.9);
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      /* ACTIVE DOT (xịn hơn) */
+      .dots span.active {
+        background: #ff6b81;
+        transform: scale(1.4);
+        box-shadow: 0 0 8px rgba(255, 107, 129, 0.6);
+      }
+
+      /* HOVER EFFECT */
+      .dots span:hover {
+        transform: scale(1.2);
+      }
+    </style>
+
     <audio id="bg-music" loop="" preload="auto">
       <source src="https://files.catbox.moe/jznfpz.mp3" type="audio/mpeg" />
     </audio>
@@ -6127,6 +6310,7 @@
         });
       });
     </script>
+
     <!-- PROTECT_COPY_START -->
     <script>
       window.oncontextmenu = function () {
@@ -6171,6 +6355,7 @@
     </style>
     <!-- PROTECT_COPY_END -->
   </head>
+
   <body class="lazyload">
     <div class="ladi-wraper">
       <div id="SECTION1" class="ladi-section">
@@ -6537,7 +6722,7 @@
                         id="BUTTON_TEXT6"
                         class="ladi-element ladi-button-headline"
                       >
-                        <p class="ladi-headline">Mừng cưới</p>
+                        <p class="ladi-headline">0911.600.013</p>
                       </div>
                     </div>
                   </div>
@@ -6611,7 +6796,7 @@
                         id="BUTTON_TEXT9"
                         class="ladi-element ladi-button-headline"
                       >
-                        <p class="ladi-headline">Mừng cưới</p>
+                        <p class="ladi-headline">0822.168.320</p>
                       </div>
                     </div>
                   </div>
@@ -6703,6 +6888,61 @@
           </div>
         </div>
       </div>
+
+      <div class="love-timeline">
+        <div class="timeline-container">
+          <!-- CARD -->
+          <div class="timeline-card active">
+            <img src="./images/1.jpg" />
+            <h3>01.01.2023</h3>
+            <p>Lần đầu gặp nhau ❤️</p>
+          </div>
+
+          <div class="timeline-card">
+            <img src="./images/2.jpg" />
+            <h3>14.02.2023</h3>
+            <p>Buổi hẹn đầu tiên 🌹</p>
+          </div>
+
+          <div class="timeline-card">
+            <img src="./images/3.jpg" />
+            <h3>01.06.2024</h3>
+            <p>Chuyến đi đáng nhớ ✈️</p>
+          </div>
+
+          <div class="timeline-card">
+            <img src="./images/3.jpg" />
+            <h3>01.06.2024</h3>
+            <p>Chuyến đi đáng nhớ ✈️</p>
+          </div>
+
+          <div class="timeline-card">
+            <img src="./images/3.jpg" />
+            <h3>01.06.2024</h3>
+            <p>Chuyến đi đáng nhớ ✈️</p>
+          </div>
+
+          <div class="timeline-card">
+            <img src="./images/3.jpg" />
+            <h3>01.06.2024</h3>
+            <p>Chuyến đi đáng nhớ ✈️</p>
+          </div>
+
+          <div class="timeline-card">
+            <img src="./images/3.jpg" />
+            <h3>01.06.2024</h3>
+            <p>Chuyến đi đáng nhớ ✈️</p>
+          </div>
+
+          <!-- DOT -->
+          <div class="dots"></div>
+
+          <!-- BUTTON -->
+          <button class="nav prev">‹</button>
+          <button class="nav next">›</button>
+        </div>
+      </div>
+
       <div id="SECTION4" class="ladi-section">
         <div class="ladi-section-background"></div>
         <div class="ladi-container">
@@ -7108,8 +7348,8 @@
               </div>
               <div id="PARAGRAPH16" class="ladi-element">
                 <div class="ladi-paragraph">
-                  Chúng con/em/mình mong rằng hôn lễ này sẽ có sự tham dự
-                  và chung vui<br />của Quý vị, hãy cùng Đan và Anh lưu giữ khoảnh
+                  Chúng con/em/mình mong rằng hôn lễ này sẽ có sự tham dự và
+                  chung vui<br />của Quý vị, hãy cùng Đan và Anh lưu giữ khoảnh
                   khắc ngọt ngào này nhé!
                 </div>
               </div>
@@ -8481,5 +8721,71 @@
         }
       </style>
     </div>
+    <script>
+      const cards = document.querySelectorAll(".timeline-card");
+      const dotsContainer = document.querySelector(".dots");
+
+      let current = 0;
+      let autoSlide;
+
+      // tạo dots
+      cards.forEach((_, i) => {
+        const dot = document.createElement("span");
+        dot.onclick = () => {
+          current = i;
+          update();
+          resetAuto();
+        };
+        dotsContainer.appendChild(dot);
+      });
+
+      const dots = document.querySelectorAll(".dots span");
+
+      function update() {
+        cards.forEach((c) => c.classList.remove("active", "prev", "next"));
+        dots.forEach((d) => d.classList.remove("active"));
+
+        const prev = (current - 1 + cards.length) % cards.length;
+        const next = (current + 1) % cards.length;
+
+        cards[current].classList.add("active");
+        cards[prev].classList.add("prev");
+        cards[next].classList.add("next");
+
+        dots[current].classList.add("active");
+      }
+
+      function nextSlide() {
+        current = (current + 1) % cards.length;
+        update();
+      }
+
+      function prevSlide() {
+        current = (current - 1 + cards.length) % cards.length;
+        update();
+      }
+
+      document.querySelector(".next").onclick = () => {
+        nextSlide();
+        resetAuto();
+      };
+
+      document.querySelector(".prev").onclick = () => {
+        prevSlide();
+        resetAuto();
+      };
+
+      function startAuto() {
+        autoSlide = setInterval(nextSlide, 5000);
+      }
+
+      function resetAuto() {
+        clearInterval(autoSlide);
+        startAuto();
+      }
+
+      update();
+      startAuto();
+    </script>
   </body>
 </html>
